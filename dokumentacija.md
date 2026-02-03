@@ -126,13 +126,88 @@ Naglasiti da igra ne analizira podatke, već ih samo prikuplja.
 
 ## 8. Sustav upozorenja
 
-### 8.1 Vrste upozorenja
-- Vizualna
-- Zvučna
-- Kombinirana
+Sustav upozorenja ima cilj pravovremeno obavještavati korisnika o smanjenoj razini koncentracije ili pojavi umora tijekom igranja.
 
-### 8.2 Način aktivacije upozorenja
-Kako i kada se upozorenja prikazuju.
+Njegova je uloga povećati sigurnost i svijest korisnika, bez narušavanja korisničkog iskustva.
+
+Upozorenja su dizajnirana tako da budu jasno uočljiva, ali nenametljiva, te prilagodljiva različitim situacijama.
+
+Sustav podržava više vrsta upozorenja kako bi se osigurala učinkovita komunikacija s korisnikom.
+
+### 8.1 Vrste upozorenja
+
+#### 8.1.1 Vizualna upozorenja
+
+Vizualna upozorenja prikazuju se na ekranu u obliku jasno prepoznatljivih grafičkih elemenata i promjena u korisničkom sučelju. Njihova je svrha diskretno, ali učinkovito skrenuti pažnju korisniku bez korištenja zvuka. Ova vrsta upozorenja posebno je korisna u situacijama gdje zvuk nije poželjan ili treba biti ograničen, ali se može koristiti i u kombinaciji s drugim vrstama upozorenja.
+
+Primjeri vizualnih upozorenja u igri uključuju:
+- promjenu boje rubova ekrana (npr. postupno crvenilo ili zatamnjenje)
+- pojavu ikone upozorenja na HUD-u (npr. simbol oka ili umora)
+- kratku tekstualnu poruku ili obavijest na ekranu
+- blago zamućenje slike ili smanjenje kontrasta kako bi se simulirao pad koncentracije
+- treperenje ili pulsiranje određenih elemenata korisničkog sučelja
+
+#### 8.1.2 Zvučna upozorenja
+
+Zvučna upozorenja koriste kratke zvučne signale ili tonove kako bi brzo privukla pažnju korisnika. Ova vrsta upozorenja osobito je korisna u situacijama kada vizualni elementi mogu proći nezapaženo, primjerice kada je korisnik fokusiran na središnji dio ekrana ili ne primjećuje promjene u sučelju.
+
+Zvučna upozorenja u igri mogu uključivati:
+- kratki upozoravajući zvučni signal
+- ton sličan alarmu ili obavijesti u vozilu
+- suptilan, ali ponavljajući zvuk koji signalizira smanjenje koncentracije
+
+Zvučni signali dizajnirani su tako da ne budu agresivni, već informativni, te da ne narušavaju ukupni doživljaj igre.
+
+#### 8.1.3 Kombinirana upozorenja
+
+Kombinirana upozorenja predstavljaju istovremenu primjenu vizualnih i zvučnih elemenata te osiguravaju najvišu razinu uočljivosti. Koriste se u kritičnim situacijama kada je potrebno odmah upozoriti korisnika i potaknuti ga na što bržu reakciju.
+
+U kombiniranim upozorenjima, vizualni elementi (npr. promjena boje ekrana ili HUD upozorenje) sinkronizirani su sa zvučnim signalom, čime se povećava vjerojatnost da će korisnik primijetiti upozorenje i pravovremeno reagirati.
+
+### 8.2 Razine upozorenja
+
+Sustav upozorenja podijeljen je u više razina, ovisno o stupnju smanjenja koncentracije ili razini umora detektirane tijekom igranja. Razine upozorenja omogućuju postupno i prilagodljivo reagiranje sustava, čime se izbjegava naglo ili nepotrebno ometanje korisnika, dok se u kritičnim situacijama osigurava brza i jasna reakcija.
+
+#### 8.2.1 Niska razina upozorenja
+
+Niska razina upozorenja aktivira se pri blagom padu koncentracije. Cilj ove razine je diskretno upozoriti korisnika bez značajnijeg prekidanja tijeka igre.
+
+U ovoj razini koriste se prvenstveno suptilna vizualna upozorenja, poput blage promjene boje korisničkog sučelja, pojave male ikone upozorenja na HUD-u ili kratke nenametljive poruke. Zvučna upozorenja u ovoj fazi uglavnom se ne koriste ili su vrlo blaga, ovisno o postavkama igre.
+
+#### 8.2.2 Srednja razina upozorenja
+
+Srednja razina upozorenja aktivira se kada sustav detektira kontinuirani ili izraženiji pad koncentracije. Ova razina ima za cilj jasno skrenuti pažnju korisniku i potaknuti ga na svjesniju reakciju.
+
+U ovoj fazi koriste se izraženija vizualna upozorenja, poput pulsiranja rubova ekrana, vidljivijih HUD indikatora ili kratkih tekstualnih obavijesti. Po potrebi se uvode i zvučni signali umjerenog intenziteta, čime se povećava uočljivost upozorenja bez narušavanja doživljaja igre.
+
+#### 8.2.3 Visoka (kritična) razina upozorenja
+
+Visoka razina upozorenja aktivira se u situacijama kada je detektirana značajna razina umora ili ozbiljan pad koncentracije koji može negativno utjecati na uspješnost ili sigurnost korisnika.
+
+Ova razina koristi kombinirana upozorenja koja uključuju izražene vizualne efekte (npr. promjena boje cijelog ekrana, jasne poruke upozorenja ili intenzivni HUD elementi) zajedno sa zvučnim signalima visoke uočljivosti. Cilj ove razine je odmah privući pažnju korisnika i potaknuti ga na brzu reakciju, poput pauziranja igre ili promjene načina igranja.
+
+
+### 8.3 Reakcija sustava na upozorenja
+
+Reakcija sustava na upozorenja ovisi o aktivnoj razini upozorenja te je dizajnirana tako da postupno utječe na tijek igre, bez naglog prekida korisničkog iskustva. Sustav reagira dinamički, prilagođavajući se stanju korisnika i kontekstu igre.
+
+Kod niske razine upozorenja, sustav ne mijenja mehanike igre, već korisniku pruža isključivo informativni signal. Igra se nastavlja neometano, a upozorenje služi kao blagi podsjetnik na smanjenje koncentracije.
+
+Kod srednje razine upozorenja, sustav može dodatno naglasiti upozorenje te potaknuti korisnika na svjesniju reakciju. U ovoj fazi moguće je privremeno pojačavanje vizualnih ili zvučnih indikatora, kao i prikaz savjeta ili kratke poruke koja korisnika upozorava na potrebu za povećanom pažnjom ili kratkim odmorom.
+
+Kod visoke (kritične) razine upozorenja, sustav može aktivno intervenirati u tijek igre. To može uključivati ali i ne mora automatsko pauziranje igre, jasno istaknutu poruku upozorenja ili preporuku za prekid igre. Cilj ove reakcije nije kažnjavanje korisnika, već zaštita korisničkog iskustva i simulacija realnih posljedica smanjene koncentracije.
+
+Nakon reakcije sustava, korisniku se omogućuje nastavak igranja, prilagodba postavki upozorenja ili prekid igre, ovisno o vlastitoj procjeni i preporukama sustava.
+
+### 8.4 Prilagodba sustava upozorenja korisniku
+
+Sustav upozorenja omogućuje prilagodbu prema preferencijama korisnika kako bi se osiguralo optimalno korisničko iskustvo bez nepotrebnog ometanja. Cilj prilagodbe je omogućiti korisniku kontrolu nad načinom i intenzitetom upozorenja, uz zadržavanje osnovne funkcionalnosti sustava.
+
+Korisnik može prilagoditi vrstu upozorenja koje želi primati, uključujući mogućnost uključivanja ili isključivanja vizualnih i zvučnih upozorenja. Također je moguće prilagoditi intenzitet zvučnih signala, učestalost pojavljivanja upozorenja te razinu njihove izraženosti unutar korisničkog sučelja.
+
+Sustav omogućuje i prilagodbu osjetljivosti upozorenja, čime korisnik može utjecati na pragove pri kojima se pojedine razine upozorenja aktiviraju. Na taj način sustav se može prilagoditi različitim stilovima igranja i individualnim razlikama među korisnicima.
+
+Sve prilagodbe dostupne su kroz izbornik postavki igre te se primjenjuju u stvarnom vremenu, bez potrebe za ponovnim pokretanjem igre. Time se osigurava fleksibilnost sustava uz zadržavanje jasnoće i konzistentnosti upozorenja tijekom igranja.
 
 ---
 
