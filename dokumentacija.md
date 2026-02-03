@@ -147,6 +147,11 @@ Primjeri vizualnih upozorenja u igri uključuju:
 - blago zamućenje slike ili smanjenje kontrasta kako bi se simulirao pad koncentracije
 - treperenje ili pulsiranje određenih elemenata korisničkog sučelja
 
+![Promjena boje rubova ekrana kao vizualno upozorenje](slike/vizualna-upozorenja.png)
+
+*Vizualno upozorenje prikazano promjenom boje rubova ekrana, pri čemu boja i debljina ruba označavaju razinu upozorenja.*
+
+
 #### 8.1.2 Zvučna upozorenja
 
 Zvučna upozorenja koriste kratke zvučne signale ili tonove kako bi brzo privukla pažnju korisnika. Ova vrsta upozorenja osobito je korisna u situacijama kada vizualni elementi mogu proći nezapaženo, primjerice kada je korisnik fokusiran na središnji dio ekrana ili ne primjećuje promjene u sučelju.
