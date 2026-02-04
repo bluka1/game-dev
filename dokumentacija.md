@@ -90,58 +90,67 @@ Neovisno o odabranoj metodi upravljanja igrom, igra dozvoljava kontrolu kretanja
 Ovo su osnove mehanike vožnje potrebne za simulaciju same vožnje u igri. 
 
 ### 5.2 Upravljanje i kontrole
-- Tipkovnica:
-|Tipka|Akcija|
-|⬆/W|Vožnja naprijed|
-|⬇/S|Kočenje/Vožnja unazad|
-|➡/D|Skretanje desno|
-|⬅/A|Skretanje lijevo|
-|1|Prva brzina|
-|2|Druga brzina|
-|3|Treća brzina|
-|4|Četvrta brzina|
-|5|Peta brzina|
-|6|Šesta brzina|
-|7/Q|Pokazivač smjera ulijevo|
-|8/E|Pokazivač smjera udesno|
-|9/F|Paljenje/gašenje prednjih svijetala|
-|0/B|Paljenje/gašenje stražnjih svijetala|
-|M|Zoomirani pogled u sve retrovizore|
-|Shift|Kvačilo|
+Tipkovnica:
+  
+| Tipka | Akcija                                      |
+|-------|---------------------------------------------|
+| ⬆/W   | Vožnja naprijed                             |
+| ⬇/S   | Kočenje/Vožnja unazad                       |
+| ➡/D   | Skretanje desno                             |
+| ⬅/A   | Skretanje lijevo                            |
+| 1     | Prva brzina                                 |
+| 2     | Druga brzina                                |
+| 3     | Treća brzina                                |
+| 4     | Četvrta brzina                              |
+| 5     | Peta brzina                                 |
+| 6     | Šesta brzina                                |
+| 7/Q   | Pokazivač smjera ulijevo                    |
+| 8/E   | Pokazivač smjera udesno                     |
+| 9/F   | Paljenje/gašenje prednjih svijetala         |
+| 0/B   | Paljenje/gašenje stražnjih svijetala        |
+| M     | Zoomirani pogled u sve retrovizore          |
+| Shift | Kvačilo                                     |
 
 
-- Kontroler:
-|Tipka|Akcija|
-|L2|Vožnja naprijed/unazad/kočenje|
-|L1|Skretanje desno/lijevo|
-|RT|Mijenjanje brzine prema gore (ubrzavanje)|
-|LT|Mijenjanje brzine prema dolje (usporavanje)|
-|⬅|Pokazivač smjera ulijevo|
-|➡|Pokazivač smjera udesno|
-|⬆|Paljenje/gašenje prednjih svijetala|
-|⬇|Paljenje/gašenje stražnjih svijetala|
-|+|Zoomirani pogled u sve retrovizore|
-|X/🔺|Kvačilo|
 
-- Volan i pedale (opcionalno)
-|Tipka|Akcija|
-|Pedala lijevo|Kvačilo|
-|Pedala sredina|Kočenje|
-|Pedala desno|Gas|
-|Y/🔺|Vožnja naprijed|
-|A/X|Vožnja unazad|
-|Okretanje volana desno/lijevo|Skretanje desno/lijevo|
-|RB|Mijenjanje brzine prema gore (ubrzavanje)|
-|LB|Mijenjanje brzine prema dolje (usporavanje)|
-|⬅|Pokazivač smjera ulijevo|
-|➡|Pokazivač smjera udesno|
-|⬆|Paljenje/gašenje prednjih svijetala|
-|⬇|Paljenje/gašenje stražnjih svijetala|
-|+|Zoomirani pogled u sve retrovizore|
+Kontroler:
+
+| Tipka | Akcija                                      |
+|-------|---------------------------------------------|
+| L2    | Vožnja naprijed/unazad/kočenje              |
+| L1    | Skretanje desno/lijevo                      |
+| RT    | Mijenjanje brzine prema gore (ubrzavanje)   |
+| LT    | Mijenjanje brzine prema dolje (usporavanje) |
+| ⬅     | Pokazivač smjera ulijevo                    |
+| ➡     | Pokazivač smjera udesno                     |
+| ⬆     | Paljenje/gašenje prednjih svijetala          |
+| ⬇     | Paljenje/gašenje stražnjih svijetala         |
+| +     | Zoomirani pogled u sve retrovizore          |
+| X/🔺  | Kvačilo                                     |
+
+
+Volan i pedale (opcionalno)
+
+| Tipka                  | Akcija                                      |
+|------------------------|---------------------------------------------|
+| Pedala lijevo          | Kvačilo                                     |
+| Pedala sredina         | Kočenje                                     |
+| Pedala desno           | Gas                                         |
+| Y/🔺                   | Vožnja naprijed                             |
+| A/X                    | Vožnja unazad                               |
+| Okretanje volana desno/lijevo | Skretanje desno/lijevo          |
+| RB                     | Mijenjanje brzine prema gore (ubrzavanje)   |
+| LB                     | Mijenjanje brzine prema dolje (usporavanje) |
+| ⬅                      | Pokazivač smjera ulijevo                    |
+| ➡                      | Pokazivač smjera udesno                     |
+| ⬆                      | Paljenje/gašenje prednjih svijetala          |
+| ⬇                      | Paljenje/gašenje stražnjih svijetala         |
+| +                      | Zoomirani pogled u sve retrovizore          |
+
 
 ### 5.3 Sustav umora
 Umor se simulira pomoću:
-- 
+- Vrijeme vožnje
 
 ### 5.4 Distrakcijski događaji
 Detaljan opis svih vrsta događaja koji testiraju pažnju.
@@ -192,10 +201,17 @@ Kako i kada se upozorenja prikazuju.
 ## 9. Korisničko sučelje (UI)
 
 ### 9.1 Pregled sučelja
-Opis glavnih ekrana.
+Glavni ekran uključuje naziv igre te meni:
+- Nova igra (New Game)
+- Učitaj igru (Load Game)
+- Postavke (Settings)
+- Izlaz (Exit)
 
 ### 9.2 HUD elementi
-Opis elemenata na zaslonu tijekom vožnje.
+Na zaslonu je vidljivo prednje staklo auta sa brisačima, volan, brzinomjer, ventilatori, radio, ladica na suvozačevoj strani.
+Mjenjač se pojavljuje preko radia pritiskom gumba za kvačilo+brzinu te se prikazuje ruka na mjenjaču koja povećava ili smanjuje brzinu.
+Pritiskom gumba za retrovizore se prikazuju zoomirani retrovizori blizu ili na mjestima gdje se inače nalaze.
+
 
 ### 9.3 Wireframe prikazi
 Mjesto za skice i ilustracije.
@@ -215,7 +231,7 @@ Blok-dijagram sustava igre i vanjskog AI sustava.
 ## 11. Svijet igre
 
 ### 11.1 Okruženja
-- Grad
+- Grad sa kompleksnim
 - Autocesta
 - Noćni uvjeti
 
