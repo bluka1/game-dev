@@ -1,0 +1,57 @@
+flowchart TD
+
+    A([Pokretanje igre]) --> B[Glavni izbornik]
+
+    B -->|Nova igra| C[Izbornik razina / područja]
+    B -->|Pregled rezultata| B1[Pregled score-a]
+    B -->|Postavke| S[Postavke igre]
+    B -->|Izlaz| X([Izlaz iz igre])
+
+    B1 --> B
+
+    S --> B
+
+    C --> D[Odabir grada / područja]
+    D --> E[Učitavanje razine]
+
+    E --> F[Uvodna scena razine]
+    F --> G[Pokretanje simulacije vožnje]
+
+    %% Score sustav
+    G --> T1[Praćenje bodova / score-a]
+    T1 --> G
+
+    %% Sustav umora
+    G --> H[Praćenje stanja vozača]
+    H --> H1[Praćenje pogleda]
+    H --> H2[Praćenje treptanja]
+    H --> H3[Praćenje položaja glave]
+
+    H1 --> I[Analiza umora]
+    H2 --> I
+    H3 --> I
+
+    I -->|Nema umora| J[Nastavak vožnje]
+    I -->|Blagi umor| K[Blago upozorenje]
+    I -->|Srednji umor| L[Srednje upozorenje]
+    I -->|Visoki umor| M[Kritično upozorenje]
+
+    K --> J
+    L --> J
+    M --> J
+
+    %% Sustav sigurnosti
+    G --> N[Praćenje stanja vozila i okoline]
+    N --> O{Incident?}
+
+    O -->|Ne| J
+    O -->|Da| P[Sudar ili izlijetanje s ceste]
+
+    P --> Q([Game Over])
+
+    J --> R{Završena ruta?}
+
+    R -->|Ne| G
+    R -->|Da| S1[Rezultat razine]
+
+    S1 --> C

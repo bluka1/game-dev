@@ -1,0 +1,40 @@
+flowchart LR
+
+    UI[Korisničko sučelje - izbornici i HUD]
+    GM[Game Manager - glavna logika igre]
+
+    LV[Sustav razina - gradovi i područja]
+    DR[Simulacija vožnje]
+
+    PT[Sustav praćenja vozača]
+    AU[Sustav analize umora]
+
+    UW[Sustav upozorenja]
+
+    SV[Sustav sigurnosti vožnje]
+
+    SC[Score sustav]
+
+    DB[Pohrana podataka - rezultati i score]
+
+    %% Veze izmedu sustava
+    UI --> GM
+    GM --> UI
+
+    GM --> LV
+    LV --> GM
+
+    GM --> DR
+    DR --> GM
+
+    DR --> PT
+    PT --> AU
+    AU --> UW
+    UW --> DR
+
+    DR --> SV
+    SV --> GM
+
+    GM --> SC
+    SC --> DB
+    DB --> UI
