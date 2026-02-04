@@ -80,15 +80,68 @@ Single-player, real-time simulacija.
 ## 5. Taktički aspekti igre (Gameplay)
 
 ### 5.1 Osnovna mehanika igre
-Opis temeljne mehanike vožnje.
+Neovisno o odabranoj metodi upravljanja igrom, igra dozvoljava kontrolu kretanja naprijed, nazad, lijevo, desno te također omogućava detaljniju kontrolu vožnje:
+- Kontrola kvačila/spojke
+- Mijenjanje brzine
+- Automatski/ručni pokazivač smjera
+- Paljenje/gašenje prednjih i zadnjih svjetala
+- Zoomirani pogled u retrovizore
+- Kočenje
+Ovo su osnove mehanike vožnje potrebne za simulaciju same vožnje u igri. 
 
 ### 5.2 Upravljanje i kontrole
-- Tipkovnica
-- Kontroler
+- Tipkovnica:
+|Tipka|Akcija|
+|⬆/W|Vožnja naprijed|
+|⬇/S|Kočenje/Vožnja unazad|
+|➡/D|Skretanje desno|
+|⬅/A|Skretanje lijevo|
+|1|Prva brzina|
+|2|Druga brzina|
+|3|Treća brzina|
+|4|Četvrta brzina|
+|5|Peta brzina|
+|6|Šesta brzina|
+|7/Q|Pokazivač smjera ulijevo|
+|8/E|Pokazivač smjera udesno|
+|9/F|Paljenje/gašenje prednjih svijetala|
+|0/B|Paljenje/gašenje stražnjih svijetala|
+|M|Zoomirani pogled u sve retrovizore|
+|Shift|Kvačilo|
+
+
+- Kontroler:
+|Tipka|Akcija|
+|L2|Vožnja naprijed/unazad/kočenje|
+|L1|Skretanje desno/lijevo|
+|RT|Mijenjanje brzine prema gore (ubrzavanje)|
+|LT|Mijenjanje brzine prema dolje (usporavanje)|
+|⬅|Pokazivač smjera ulijevo|
+|➡|Pokazivač smjera udesno|
+|⬆|Paljenje/gašenje prednjih svijetala|
+|⬇|Paljenje/gašenje stražnjih svijetala|
+|+|Zoomirani pogled u sve retrovizore|
+|X/🔺|Kvačilo|
+
 - Volan i pedale (opcionalno)
+|Tipka|Akcija|
+|Pedala lijevo|Kvačilo|
+|Pedala sredina|Kočenje|
+|Pedala desno|Gas|
+|Y/🔺|Vožnja naprijed|
+|A/X|Vožnja unazad|
+|Okretanje volana desno/lijevo|Skretanje desno/lijevo|
+|RB|Mijenjanje brzine prema gore (ubrzavanje)|
+|LB|Mijenjanje brzine prema dolje (usporavanje)|
+|⬅|Pokazivač smjera ulijevo|
+|➡|Pokazivač smjera udesno|
+|⬆|Paljenje/gašenje prednjih svijetala|
+|⬇|Paljenje/gašenje stražnjih svijetala|
+|+|Zoomirani pogled u sve retrovizore|
 
 ### 5.3 Sustav umora
-Opis kako se umor simulira unutar igre.
+Umor se simulira pomoću:
+- 
 
 ### 5.4 Distrakcijski događaji
 Detaljan opis svih vrsta događaja koji testiraju pažnju.
