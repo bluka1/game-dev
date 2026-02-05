@@ -1,79 +1,66 @@
 # Dokument dizajna igre
 
 ## Podaci o projektu
-- Naziv igre:
-- Projekt:
-- Fakultet:
-- Kolegij:
-- Mentor:
-- Autori:
-- Verzija dokumenta:
-- Datum:
-
----
-
-## Povijest verzija dokumenta
-| Verzija | Datum | Autor | Opis promjene |
-|-------|-------|-------|---------------|
-| 0.1   |       |       | Početna verzija dokumenta |
+- Naziv igre: Focus Drive
+- Autori: Lana Kohut, Daniel Katić i Luka Batarelo
+- Verzija dokumenta: 1.0
+- Datum: 06.02.2026.
 
 ---
 
 ## 1. Uvod
 
 ### 1.1 Svrha dokumenta
-Opisati svrhu ovog dokumenta dizajna igre, njegovu ulogu u razvoju projekta te kome je namijenjen.
+Ovaj dokument definira dizajn i funkcionalne specifikacije simulatora vožnje namijenjenog istraživanju ljudskog umora tijekom vožnje. Služi kao vodilja developerima za implementaciju igre i timu istraživača za razumijevanje na koji način se analiziraju i prikupljaju podaci.
 
 ### 1.2 Povezanost s istraživačkim projektom
-Opis kako se igra koristi kao simulacijsko okruženje unutar šireg istraživačkog projekta.
-Naglasiti da AI sustav nije dio ovog rada.
+Igra je ključni alat projekta DMM (Driver Monitoring Model). Ona stvara kontrolirano, repetitivno okruženje potrebno za poticanje stanja smanjene budnosti kod ispitanika. Važno je naglasiti da je AI sustav koji analizira te podatke odvojen istraživački entitet, dok igra služi isključivo kao platforma za generiranje scenarija i prikupljanje parametara kroz igru.
 
 ### 1.3 Opseg dokumenta
-Što dokument pokriva, a što je izvan njegovog opsega.
+Dokument obuhvaća dizajn okruženja (autoceste, noć), scenarije kroz igru, općenite opise uloge i zadatka igrača, integraciju AI modula, sustav povratnih informacija tj. upozorenja te tehničke zahtjeve i okvirne specifikacije.
 
 ---
 
 ## 2. Vizija igre
 
 ### 2.1 Opis vizije
-Sažet, ali jasan opis ideje igre (cca 300–500 riječi).
+Igra je napredni simulator sigurnosti koji simulira najopasnije aspekte dugotrajne vožnje: monotoniju i smanjenu vidljivost u teškim uvjetima. Igrač se bori s "hipnozom ceste" dok integrirani AI sustav u pozadini neprestano analizira njegovo stanje. Vizija je stvoriti simbiozu između čovjeka i stroja gdje igra reagira na biološke signale umora (npr. ako igrač predugo ne trepne ili mu glava klone, igra aktivira specifične podražaje tj. upozorenja).
 
 ### 2.2 Game logline
-Jedna rečenica koja opisuje igru.
+Inteligentni simulator vožnje koji koristi AI kako bi prepoznao i reagirao na tvoj umor u najtežim uvjetima ceste.
 
 ### 2.3 Jedinstvenost igre
-Po čemu se ova igra razlikuje od postojećih simulacija vožnje.
+Igra se ne oslanja samo na pritisak tipki, već na stvarno fiziološko stanje igrača. AI sustav prepoznaje umor prije nego što igrač napravi grešku na cesti, pretvarajući "pasivni" simulator u "aktivni" sustav zaštite.
 
 ### 2.4 Look and feel
-Vizualni i atmosferski dojam igre.
+Vizualni dojam teži čim vjernijim prikazima stvarnih uvjeta (kiša, magla, noć) koji otežavaju vožnju. Atmosfera treba uglavnom biti umirujuća, ali opasno monotona te na taj način uz vizualno teške uvjete potencirati umor vozača.
 
 ---
 
 ## 3. Ciljana publika i platforme
 
 ### 3.1 Ciljana publika
-Opis korisnika (npr. studenti, vozači, akademska zajednica).
+Studenti, znanstveni djelatnici, osoblje u autoškolama te svi koji vole voziti.
 
 ### 3.2 Platforme
-- PC (primarna platforma)
-- Ostale moguće platforme (opcionalno)
+Osobno računalo - zbog procesorske snage potrebne za istovremeno izvođenje igre i AI modela za analizu slike u stvarnom vremenu.
 
 ### 3.3 Hardverski zahtjevi
-- Minimalni
-- Preporučeni
+Okvirni zahtjevi:
+- minimalni: CPU s 6 jezgri (zbog AI paralelizacije), 16GB RAM, HD Web kamera (30 FPS)
 
 ---
 
 ## 4. Opći opis igre
 
 ### 4.1 Žanr igre
-Opis žanra i podžanra.
+Žanr igre je simulacija, odnosno, ozbiljna igra.
 
 ### 4.2 Način igranja
-Single-player, real-time simulacija.
+Vožnja kroz igru na računalu s naglaskom na budnost i izdržljivost u vožnji. AI sustav djeluje kao "suvozač" koji nadzire igrača.
 
 ### 4.3 Ciljevi igrača
-Što igrač pokušava postići tijekom igranja.
+Prevesti zadanu dionicu bez aktivacije AI alarma visoke razine, održavajući budnost uz dosadnu vožnju kroz teške ili dosadne uvjete na cesti.
 
 ---
 
@@ -114,13 +101,16 @@ Opis tijeka scenarija.
 ## 7. Sustav praćenja korisnika
 
 ### 7.1 Uloga kamere
-Opis svrhe korištenja web kamere.
+Kamera ne služi samo snimanju već i kao izvor podataka za AI sustav. Ona u realnom vremenu snima te se svakih npr. 50 milisekundi snimi slika za AI model koji izračunava postotak zatvorenosti očiju i frekvenciju treptanja.
 
 ### 7.2 Podaci koje igra prikuplja
-Popis svih podataka koje igra šalje vanjskom sustavu.
+Biometrija: AI detektira mikrosan tj. gledanje u prazno, zijevanje i nagib glave
+Telemetrija: Odstupanje od trake (Lane Departure) sinkronizirano s detekcijom pogleda
 
 ### 7.3 Granice sustava
-Naglasiti da igra ne analizira podatke, već ih samo prikuplja.
+Kad AI prepozna kritičnu razinu umora, igra aktivira:
+- vizualna upozorenja
+- glasovna upozorenja
 
 ---
 
