@@ -134,11 +134,20 @@ Upozorenja su dizajnirana tako da budu jasno uočljiva, ali nenametljiva, te pri
 
 Sustav podržava više vrsta upozorenja kako bi se osigurala učinkovita komunikacija s korisnikom.
 
+Zbog ograničenja prikaza na zaslonu, sustav upozorenja koristi kombinaciju simulacije realnih automobilskih indikatora i vizualnih pojačanja preko ekrana kako bi se postigla veća uočljivost i razumijevanje upozorenja.
+
+
 ### 8.1 Vrste upozorenja
 
 #### 8.1.1 Vizualna upozorenja
 
 Vizualna upozorenja prikazuju se na ekranu u obliku jasno prepoznatljivih grafičkih elemenata i promjena u korisničkom sučelju. Njihova je svrha diskretno, ali učinkovito skrenuti pažnju korisniku bez korištenja zvuka. Ova vrsta upozorenja posebno je korisna u situacijama gdje zvuk nije poželjan ili treba biti ograničen, ali se može koristiti i u kombinaciji s drugim vrstama upozorenja.
+
+Vizualna upozorenja uključuju i simulaciju upozoravajuće lampice, nalik
+onima koje se koriste u stvarnim vozilima (npr. simbol umora ili pažnje),
+koja je stalno vidljiva na HUD-u. Ova lampica služi kao primarni,
+realistični indikator upozorenja, dok se dodatni vizualni efekti koriste
+za pojačavanje uočljivosti na zaslonu.
 
 Primjeri vizualnih upozorenja u igri uključuju:
 - promjenu boje rubova ekrana (npr. postupno crvenilo ili zatamnjenje)
@@ -146,11 +155,17 @@ Primjeri vizualnih upozorenja u igri uključuju:
 - kratku tekstualnu poruku ili obavijest na ekranu
 - blago zamućenje slike ili smanjenje kontrasta kako bi se simulirao pad koncentracije
 - treperenje ili pulsiranje određenih elemenata korisničkog sučelja
+- aktivaciju upozoravajuće lampice na HUD-u (simulacija upozorenja u vozilu)
+- blago obojani overlay preko cijelog ekrana koji označava stanje upozorenja
+
 
 ![Promjena boje rubova ekrana kao vizualno upozorenje](slike/vizualna-upozorenja.png)
 
 *Vizualno upozorenje prikazano promjenom boje rubova ekrana, pri čemu boja i debljina ruba označavaju razinu upozorenja.*
 
+![Overlay i upozorenje umora](slike/vizualna-upozorenja-2.png)
+
+*Upozorenje prikazano overlayom gdje se mijenja boja cijelog ekrana, te se kombinira s simbolom i tekstom.*
 
 #### 8.1.2 Zvučna upozorenja
 
@@ -165,9 +180,10 @@ Zvučni signali dizajnirani su tako da ne budu agresivni, već informativni, te 
 
 #### 8.1.3 Kombinirana upozorenja
 
-Kombinirana upozorenja predstavljaju istovremenu primjenu vizualnih i zvučnih elemenata te osiguravaju najvišu razinu uočljivosti. Koriste se u kritičnim situacijama kada je potrebno odmah upozoriti korisnika i potaknuti ga na što bržu reakciju.
+Kombinirana upozorenja predstavljaju istovremenu primjenu više vizualnih elemenata, poput upozoravajuće lampice na HUD-u i blago obojenog overlaya
+preko cijelog ekrana, uz mogućnost korištenja zvučnih signala.
 
-U kombiniranim upozorenjima, vizualni elementi (npr. promjena boje ekrana ili HUD upozorenje) sinkronizirani su sa zvučnim signalom, čime se povećava vjerojatnost da će korisnik primijetiti upozorenje i pravovremeno reagirati.
+Ovakav pristup koristi se u kritičnim situacijama kada je potrebno nadoknaditi ograničenja prikaza na ekranu i osigurati maksimalnu uočljivost upozorenja.
 
 ### 8.2 Razine upozorenja
 
@@ -189,7 +205,11 @@ U ovoj fazi koriste se izraženija vizualna upozorenja, poput pulsiranja rubova 
 
 Visoka razina upozorenja aktivira se u situacijama kada je detektirana značajna razina umora ili ozbiljan pad koncentracije koji može negativno utjecati na uspješnost ili sigurnost korisnika.
 
-Ova razina koristi kombinirana upozorenja koja uključuju izražene vizualne efekte (npr. promjena boje cijelog ekrana, jasne poruke upozorenja ili intenzivni HUD elementi) zajedno sa zvučnim signalima visoke uočljivosti. Cilj ove razine je odmah privući pažnju korisnika i potaknuti ga na brzu reakciju, poput pauziranja igre ili promjene načina igranja.
+Ova razina koristi kombinirana upozorenja koja uključuju stalno aktivnu upozoravajuću lampicu na HUD-u, izražen vizualni okvir ili blago obojani overlay preko cijelog ekrana, kao i zvučne signale visoke uočljivosti.
+
+Cilj ove razine je nadomjestiti nemogućnost potpunog prikaza realnog
+upozorenja iz stvarnog vozila te osigurati da korisnik jasno i
+nedvosmisleno percipira stanje povećanog rizika.
 
 ### 8.3 Reakcija sustava na upozorenja
 
