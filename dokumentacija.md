@@ -190,13 +190,112 @@ Kad AI prepozna kritičnu razinu umora, igra aktivira:
 
 ## 8. Sustav upozorenja
 
-### 8.1 Vrste upozorenja
-- Vizualna
-- Zvučna
-- Kombinirana
+Sustav upozorenja ima cilj pravovremeno obavještavati korisnika o smanjenoj razini koncentracije ili pojavi umora tijekom igranja.
 
-### 8.2 Način aktivacije upozorenja
-Kako i kada se upozorenja prikazuju.
+Njegova je uloga povećati sigurnost i svijest korisnika, bez narušavanja korisničkog iskustva.
+
+Upozorenja su dizajnirana tako da budu jasno uočljiva, ali nenametljiva, te prilagodljiva različitim situacijama.
+
+Sustav podržava više vrsta upozorenja kako bi se osigurala učinkovita komunikacija s korisnikom.
+
+Zbog ograničenja prikaza na zaslonu, sustav upozorenja koristi kombinaciju simulacije realnih automobilskih indikatora i vizualnih pojačanja preko ekrana kako bi se postigla veća uočljivost i razumijevanje upozorenja.
+
+
+### 8.1 Vrste upozorenja
+
+#### 8.1.1 Vizualna upozorenja
+
+Vizualna upozorenja prikazuju se na ekranu u obliku jasno prepoznatljivih grafičkih elemenata i promjena u korisničkom sučelju. Njihova je svrha diskretno, ali učinkovito skrenuti pažnju korisniku bez korištenja zvuka. Ova vrsta upozorenja posebno je korisna u situacijama gdje zvuk nije poželjan ili treba biti ograničen, ali se može koristiti i u kombinaciji s drugim vrstama upozorenja.
+
+Vizualna upozorenja uključuju i simulaciju upozoravajuće lampice, nalik
+onima koje se koriste u stvarnim vozilima (npr. simbol umora ili pažnje),
+koja je stalno vidljiva na HUD-u. Ova lampica služi kao primarni,
+realistični indikator upozorenja, dok se dodatni vizualni efekti koriste
+za pojačavanje uočljivosti na zaslonu.
+
+Primjeri vizualnih upozorenja u igri uključuju:
+- promjenu boje rubova ekrana (npr. postupno crvenilo ili zatamnjenje)
+- pojavu ikone upozorenja na HUD-u (npr. simbol oka ili umora)
+- kratku tekstualnu poruku ili obavijest na ekranu
+- blago zamućenje slike ili smanjenje kontrasta kako bi se simulirao pad koncentracije
+- treperenje ili pulsiranje određenih elemenata korisničkog sučelja
+- aktivaciju upozoravajuće lampice na HUD-u (simulacija upozorenja u vozilu)
+- blago obojani overlay preko cijelog ekrana koji označava stanje upozorenja
+
+
+![Promjena boje rubova ekrana kao vizualno upozorenje](slike/vizualna-upozorenja.png)
+
+*Vizualno upozorenje prikazano promjenom boje rubova ekrana, pri čemu boja i debljina ruba označavaju razinu upozorenja.*
+
+![Overlay i upozorenje umora](slike/vizualna-upozorenja-2.png)
+
+*Upozorenje prikazano overlayom gdje se mijenja boja cijelog ekrana, te se kombinira s simbolom i tekstom.*
+
+#### 8.1.2 Zvučna upozorenja
+
+Zvučna upozorenja koriste kratke zvučne signale ili tonove kako bi brzo privukla pažnju korisnika. Ova vrsta upozorenja osobito je korisna u situacijama kada vizualni elementi mogu proći nezapaženo, primjerice kada je korisnik fokusiran na središnji dio ekrana ili ne primjećuje promjene u sučelju.
+
+Zvučna upozorenja u igri mogu uključivati:
+- kratki upozoravajući zvučni signal
+- ton sličan alarmu ili obavijesti u vozilu
+- suptilan, ali ponavljajući zvuk koji signalizira smanjenje koncentracije
+
+Zvučni signali dizajnirani su tako da ne budu agresivni, već informativni, te da ne narušavaju ukupni doživljaj igre.
+
+#### 8.1.3 Kombinirana upozorenja
+
+Kombinirana upozorenja predstavljaju istovremenu primjenu više vizualnih elemenata, poput upozoravajuće lampice na HUD-u i blago obojenog overlaya
+preko cijelog ekrana, uz mogućnost korištenja zvučnih signala.
+
+Ovakav pristup koristi se u kritičnim situacijama kada je potrebno nadoknaditi ograničenja prikaza na ekranu i osigurati maksimalnu uočljivost upozorenja.
+
+### 8.2 Razine upozorenja
+
+Sustav upozorenja podijeljen je u više razina, ovisno o stupnju smanjenja koncentracije ili razini umora detektirane tijekom igranja. Razine upozorenja omogućuju postupno i prilagodljivo reagiranje sustava, čime se izbjegava naglo ili nepotrebno ometanje korisnika, dok se u kritičnim situacijama osigurava brza i jasna reakcija.
+
+#### 8.2.1 Niska razina upozorenja
+
+Niska razina upozorenja aktivira se pri blagom padu koncentracije. Cilj ove razine je diskretno upozoriti korisnika bez značajnijeg prekidanja tijeka igre.
+
+U ovoj razini koriste se prvenstveno suptilna vizualna upozorenja, poput blage promjene boje korisničkog sučelja, pojave male ikone upozorenja na HUD-u ili kratke nenametljive poruke. Zvučna upozorenja u ovoj fazi uglavnom se ne koriste ili su vrlo blaga, ovisno o postavkama igre.
+
+#### 8.2.2 Srednja razina upozorenja
+
+Srednja razina upozorenja aktivira se kada sustav detektira kontinuirani ili izraženiji pad koncentracije. Ova razina ima za cilj jasno skrenuti pažnju korisniku i potaknuti ga na svjesniju reakciju.
+
+U ovoj fazi koriste se izraženija vizualna upozorenja, poput pulsiranja rubova ekrana, vidljivijih HUD indikatora ili kratkih tekstualnih obavijesti. Po potrebi se uvode i zvučni signali umjerenog intenziteta, čime se povećava uočljivost upozorenja bez narušavanja doživljaja igre.
+
+#### 8.2.3 Visoka (kritična) razina upozorenja
+
+Visoka razina upozorenja aktivira se u situacijama kada je detektirana značajna razina umora ili ozbiljan pad koncentracije koji može negativno utjecati na uspješnost ili sigurnost korisnika.
+
+Ova razina koristi kombinirana upozorenja koja uključuju stalno aktivnu upozoravajuću lampicu na HUD-u, izražen vizualni okvir ili blago obojani overlay preko cijelog ekrana, kao i zvučne signale visoke uočljivosti.
+
+Cilj ove razine je nadomjestiti nemogućnost potpunog prikaza realnog
+upozorenja iz stvarnog vozila te osigurati da korisnik jasno i
+nedvosmisleno percipira stanje povećanog rizika.
+
+### 8.3 Reakcija sustava na upozorenja
+
+Reakcija sustava na upozorenja ovisi o aktivnoj razini upozorenja te je dizajnirana tako da postupno utječe na tijek igre, bez naglog prekida korisničkog iskustva. Sustav reagira dinamički, prilagođavajući se stanju korisnika i kontekstu igre.
+
+Kod niske razine upozorenja, sustav ne mijenja mehanike igre, već korisniku pruža isključivo informativni signal. Igra se nastavlja neometano, a upozorenje služi kao blagi podsjetnik na smanjenje koncentracije.
+
+Kod srednje razine upozorenja, sustav može dodatno naglasiti upozorenje te potaknuti korisnika na svjesniju reakciju. U ovoj fazi moguće je privremeno pojačavanje vizualnih ili zvučnih indikatora, kao i prikaz savjeta ili kratke poruke koja korisnika upozorava na potrebu za povećanom pažnjom ili kratkim odmorom.
+
+Kod visoke (kritične) razine upozorenja, sustav može aktivno intervenirati u tijek igre. To može uključivati ali i ne mora automatsko pauziranje igre, jasno istaknutu poruku upozorenja ili preporuku za prekid igre. Cilj ove reakcije nije kažnjavanje korisnika, već zaštita korisničkog iskustva i simulacija realnih posljedica smanjene koncentracije.
+
+Nakon reakcije sustava, korisniku se omogućuje nastavak igranja, prilagodba postavki upozorenja ili prekid igre, ovisno o vlastitoj procjeni i preporukama sustava.
+
+### 8.4 Prilagodba sustava upozorenja korisniku
+
+Sustav upozorenja omogućuje prilagodbu prema preferencijama korisnika kako bi se osiguralo optimalno korisničko iskustvo bez nepotrebnog ometanja. Cilj prilagodbe je omogućiti korisniku kontrolu nad načinom i intenzitetom upozorenja, uz zadržavanje osnovne funkcionalnosti sustava.
+
+Korisnik može prilagoditi vrstu upozorenja koje želi primati, uključujući mogućnost uključivanja ili isključivanja vizualnih i zvučnih upozorenja. Također je moguće prilagoditi intenzitet zvučnih signala, učestalost pojavljivanja upozorenja te razinu njihove izraženosti unutar korisničkog sučelja.
+
+Sustav omogućuje i prilagodbu osjetljivosti upozorenja, čime korisnik može utjecati na pragove pri kojima se pojedine razine upozorenja aktiviraju. Na taj način sustav se može prilagoditi različitim stilovima igranja i individualnim razlikama među korisnicima.
+
+Sve prilagodbe dostupne su kroz izbornik postavki igre te se primjenjuju u stvarnom vremenu, bez potrebe za ponovnim pokretanjem igre. Time se osigurava fleksibilnost sustava uz zadržavanje jasnoće i konzistentnosti upozorenja tijekom igranja.
 
 ---
 
@@ -228,10 +327,27 @@ U donjem desnom kutu je vidljiv mjerač umora koji mjeri vozačev umor te se u o
 ## 10. Dijagrami
 
 ### 10.1 Dijagram toka igre
-Opis toka igre (uz ilustraciju).
+
+![Dijagram toka igre](slike/dijagram-toka-render.png)
+
+Dijagram toka prikazuje cjelokupni tijek igre, počevši od glavnog izbornika, odabira razine i pokretanja simulacije vožnje. 
+
+Tijekom vožnje paralelno se prati stanje vozača, sigurnost vožnje i bodovanje, pri čemu nijedan od tih sustava ne ovisi izravno o ostalima. 
+
+Sustav umora generira upozorenja različitih razina, dok sustav sigurnosti neovisno detektira prometne incidente koji mogu dovesti do završetka razine. 
+
+Nakon završetka vožnje, igraču se prikazuje rezultat razine te se omogućuje povratak u izbornik razina ili pregled ostvarenih rezultata.
 
 ### 10.2 Arhitektura sustava
-Blok-dijagram sustava igre i vanjskog AI sustava.
+
+![Blok dijagram sustava igre](slike/blok-dijagram-sustava-render.png)
+
+Blok-dijagram sustava prikazuje glavne funkcionalne cjeline igre i
+njihove međusobne odnose. 
+Game Manager predstavlja središnju komponentu koja upravlja simulacijom vožnje, razinama i komunikacijom izmedu sustava. 
+Sustav praćenja vozača i sustav analize umora omogućuju generiranje upozorenja, dok sustav sigurnosti vožnje
+neovisno detektira prometne incidente. 
+Score sustav prikuplja podatke o uspješnosti vožnje i pohranjuje ih za kasniji pregled kroz korisničko sučelje.
 
 ---
 
@@ -277,24 +393,77 @@ Igrač bi unutar jednog dana najčešće imao više vremenskih uvjeta, ovisno gd
 ## 13. Tehničke specifikacije
 
 ### 13.1 Razvojno okruženje
-Unity, C#.
+
+Razvoj igre provodi se u **Unity** razvojnome okruženju, koristeći programski jezik **C#**.  
+Unity je odabran zbog dobre podrške za razvoj simulacija u stvarnom vremenu, upravljanje scenama, rad s kamerama te jednostavne integracije vanjskih sustava.  
+Projekt koristi modularni pristup razvoju, pri čemu su pojedine funkcionalnosti igre (upravljanje razinama, simulacija vožnje, sustav upozorenja i bodovanja) implementirane kao zasebne cjeline.
+
+---
 
 ### 13.2 Tehnička ograničenja
-Performanse, kamera, rezolucije.
+
+Tijekom razvoja igre uzeta su u obzir sljedeća tehnička ograničenja:
+
+- **Performanse sustava**  
+  Igra mora raditi u stvarnom vremenu uz kontinuirano praćenje stanja vozača i simulaciju vožnje. Posebnu pažnju posvetiti ćemo optimizaciji kako bi se izbjegli padovi performansi tijekom izvođenja.
+
+- **Korištenje kamere**  
+  Sustav praćenja vozača temelji se na podacima dobivenim putem kamere. Kvaliteta i pouzdanost detekcije ovise o dostupnosti kamere, osvjetljenju prostora te poziciji korisnika u odnosu na kameru.
+
+- **Rezolucije i prikaz**  
+  Igra je prilagođena radu na različitim rezolucijama zaslona. Korisničko sučelje dizajnirano je responzivno kako bi ostalo čitljivo i funkcionalno na različitim veličinama ekrana.
+
+---
 
 ### 13.3 Integracija s vanjskim sustavima
-Konceptualni opis komunikacije s AI sustavom.
+
+Igra je konceptualno predviđena za integraciju s vanjskim **AI sustavom za analizu umora vozača**, koji se razvija kao zasebna komponenta.  
+Unity aplikacija prikuplja potrebne ulazne podatke te ih prosljeđuje AI sustavu na obradu.  
+Rezultati analize vraćaju se u igru u obliku apstraktnih informacija o stanju vozača (npr. razina umora), koje se zatim koriste za aktivaciju odgovarajućih upozorenja i utjecaj na tijek igre.  
+Detaljna implementacija komunikacije i obrade podataka nije dio ovog projekta te je izvan opsega ove dokumentacije.
 
 ---
 
 ## 14. Rizici i ograničenja
 
-- Tehnički rizici
-- Hardverska ograničenja
-- Organizacijski rizici
+### 14.1 Tehnički rizici
+
+Razvoj igre uključuje više tehničkih komponenti koje mogu predstavljati potencijalne rizike.  
+Najveći tehnički rizik odnosi se na stabilnost i točnost sustava za praćenje stanja vozača, koji ovisi o kvaliteti ulaznih podataka i uvjetima korištenja.  
+Postoji i rizik povezan s performansama aplikacije, budući da se istovremeno izvodi simulacija vožnje, analiza podataka i prikaz korisničkog sučelja u stvarnom vremenu.  
+Dodatni tehnički izazov predstavlja integracija vanjskog AI sustava, koja zahtijeva usklađivanje formata podataka i vremena odaziva.
+
+---
+
+### 14.2 Hardverska ograničenja
+
+Funkcionalnost igre djelomično ovisi o hardverskim mogućnostima korisničkog sustava.  
+Korištenje kamere za praćenje vozača može biti ograničeno kvalitetom kamere, osvjetljenjem prostora te položajem korisnika u odnosu na kameru.  
+Različite konfiguracije računala i razine grafičkih performansi mogu utjecati na stabilnost i fluidnost izvođenja simulacije.  
+Zbog toga je potrebno prilagoditi postavke igre kako bi se osigurao prihvatljiv rad na širem rasponu uređaja.
+
+---
+
+### 14.3 Organizacijski rizici
+
+Projekt se razvija timski, što sa sobom nosi određene organizacijske rizike.  
+Razdvajanje razvoja igre i AI sustava između različitih timova može dovesti do problema u koordinaciji, komunikaciji i usklađivanju rokova.  
+Postoji i rizik vezan uz raspoloživo vrijeme članova tima, budući da se projekt razvija paralelno s ostalim akademskim obvezama.  
+Kako bi se smanjili organizacijski rizici, važno je jasno definirati odgovornosti, komunikacijske kanale i vremenske okvire rada.
 
 ---
 
 ## 15. Zaključak
 
-Sažetak dizajna i smjer daljnjeg razvoja.
+Ovim dokumentom dizajna definirani su temeljni koncepti, struktura i funkcionalnosti računalne igre koja služi kao simulacijsko okruženje u sklopu istraživačkog projekta usmjerenog na praćenje pažnje i umora
+vozača. Dokument obuhvaća cjelokupnu viziju igre, ciljeve igranja, ciljanu publiku, mehanike vožnje, scenarije igranja te tehničku podlogu sustava.
+
+Kroz poglavlja je detaljno opisan način igranja, uključujući osnovne mehanike vožnje, sustav umora, distrakcijske događaje i pravila igre, čime je postavljen jasan okvir za korisničko iskustvo. Posebna pažnja posvećena je sustavu praćenja korisnika i ulozi kamere, pri čemu je naglašeno da igra ne provodi analizu podataka, već služi kao izvor ulaznih informacija za vanjski AI sustav.
+
+Dizajn sustava upozorenja i prateći dijagrami prikazuju kako igra
+dinamički reagira na promjene u stanju korisnika, uz jasno definirane razine upozorenja i prilagodbu korisničkim preferencijama. Arhitektura sustava osmišljena je modularno, što omogućuje jasnu podjelu odgovornosti između pojedinih komponenti igre te olakšava buduće nadogradnje i održavanje.
+
+U dokumentu su također razmotrena tehnička ograničenja, potencijalni rizici te organizacijski izazovi razvoja, čime je osiguran realan i održiv pristup provedbi projekta. Na taj način dokument dizajna ne služi isključivo kao opis planiranog rješenja, već i kao vodič za daljnji razvoj i koordinaciju unutar tima.
+
+Zaključno, ovaj dokument predstavlja čvrstu i konzistentnu osnovu za implementaciju igre te njezino daljnje proširenje. Postavljena struktura i jasno definirani sustavi omogućuju razvoj funkcionalne, edukativne i istraživački relevantne simulacije vožnje, uz mogućnost prilagodbe i nadogradnje u skladu s rezultatima istraživanja i budućim potrebama
+projekta.
